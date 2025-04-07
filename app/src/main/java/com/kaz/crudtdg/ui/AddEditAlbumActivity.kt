@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.snackbar.Snackbar
 import androidx.fragment.app.viewModels
@@ -13,6 +12,7 @@ import com.kaz.crudtdg.R
 import com.kaz.crudtdg.databinding.ActivityAddEditAlbumBinding
 import com.kaz.crudtdg.model.AlbumEntity
 import com.kaz.crudtdg.viewmodel.AlbumViewModel
+import java.util.Calendar
 
 class AddEditAlbumBottomSheet : BottomSheetDialogFragment() {
 
@@ -24,7 +24,11 @@ class AddEditAlbumBottomSheet : BottomSheetDialogFragment() {
     private val titulos by lazy { resources.getStringArray(R.array.titulos_album).toList() }
     private val tipos by lazy { resources.getStringArray(R.array.tipos_album).toList() }
 
-    private val anios = (1990..2025).map { it.toString() }
+
+    private val anios by lazy {
+        val anioActual = Calendar.getInstance().get(Calendar.YEAR)
+        (1990..anioActual).map { it.toString() }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,7 +42,6 @@ class AddEditAlbumBottomSheet : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Adapters
         val tituloAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, titulos)
         binding.spinnerTitulo.setAdapter(tituloAdapter)
 
@@ -48,11 +51,9 @@ class AddEditAlbumBottomSheet : BottomSheetDialogFragment() {
         val anioAdapter = ArrayAdapter(requireContext(), android.R.layout.simple_dropdown_item_1line, anios)
         binding.spinnerAnio.setAdapter(anioAdapter)
 
-
         binding.spinnerTitulo.setOnClickListener { binding.spinnerTitulo.showDropDown() }
         binding.spinnerTipo.setOnClickListener { binding.spinnerTipo.showDropDown() }
         binding.spinnerAnio.setOnClickListener { binding.spinnerAnio.showDropDown() }
-
 
         editingAlbum = arguments?.getSerializable("album") as? AlbumEntity
         editingAlbum?.let {
@@ -60,7 +61,6 @@ class AddEditAlbumBottomSheet : BottomSheetDialogFragment() {
             binding.spinnerAnio.setText(it.anio.toString(), false)
             binding.spinnerTipo.setText(it.tipo, false)
         }
-
 
         binding.btnGuardar.setOnClickListener {
             val titulo = binding.spinnerTitulo.text.toString()
@@ -73,7 +73,8 @@ class AddEditAlbumBottomSheet : BottomSheetDialogFragment() {
             }
 
             val anio = anioText.toIntOrNull()
-            if (anio == null || anio < 1990 || anio > 2027) {
+            val anioActual = Calendar.getInstance().get(Calendar.YEAR)
+            if (anio == null || anio < 1990 || anio > anioActual) {
                 Snackbar.make(binding.root, getString(R.string.anio_invalido), Snackbar.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
