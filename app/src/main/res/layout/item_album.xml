@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardElevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_radius">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/card_padding">
+
+        <ImageView
+            android:id="@+id/imageTipo"
+            android:layout_width="@dimen/album_image_size"
+            android:layout_height="@dimen/album_image_size"
+            android:layout_marginEnd="@dimen/image_margin_end"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_image_background"
+            android:clipToOutline="true"
+            android:contentDescription="@string/cd_album_image" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_titulo"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_title" />
+
+            <TextView
+                android:id="@+id/textAnio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/placeholder_anio" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/iconTipo"
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_marginEnd="@dimen/icon_margin"
+                    android:contentDescription="@string/cd_album_icon" />
+
+                <TextView
+                    android:id="@+id/textTipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/placeholder_tipo" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnEditar"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:contentDescription="@string/cd_edit"
+                android:src="@drawable/ic_edit"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageButton
+                android:id="@+id/btnEliminar"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:contentDescription="@string/cd_delete"
+                android:src="@drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageButton
+                android:id="@+id/btnFavorito"
+                android:layout_width="@dimen/button_size"
+                android:layout_height="@dimen/button_size"
+                android:contentDescription="@string/cd_favorite"
+                android:src="@drawable/ic_favorite_border"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

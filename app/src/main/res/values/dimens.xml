@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="margin_bottom_field">20dp</dimen>
+    <dimen name="input_height">60dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="button_radius">28dp</dimen>
+    <dimen name="text_size_input">17sp</dimen>
+    <dimen name="text_size_button">16sp</dimen>
+
+    <dimen name="margin_top_form">16dp</dimen>
+    <dimen name="margin_bottom_form">24dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="header_logo_height">120dp</dimen>
+
+    <dimen name="splash_logo_size">200dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_radius">8dp</dimen>
+    <dimen name="card_padding">12dp</dimen>
+    <dimen name="album_image_size">120dp</dimen>
+    <dimen name="image_margin_end">12dp</dimen>
+    <dimen name="text_size_title">16sp</dimen>
+    <dimen name="icon_size">20dp</dimen>
+    <dimen name="icon_margin">4dp</dimen>
+    <dimen name="button_size">40dp</dimen>
+
+
+</resources>

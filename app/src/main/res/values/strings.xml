@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">CRUD TDG</string>
+    <string name="guardar">Guardar</string>
+    <string name="titulo_album">Título del álbum</string>
+    <string name="tipo_album">Tipo de álbum</string>
+    <string name="anio_album">Año del álbum</string>
+    <string name="album_agregado">Álbum agregado</string>
+    <string name="album_actualizado">Álbum actualizado</string>
+    <string name="campo_requerido">Completa todos los campos</string>
+    <string name="anio_invalido">Año no válido</string>
+    <string name="no_hay_albums">No hay álbumes registrados</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="seguro_eliminar">¿Seguro que deseas eliminar "%1$s"?</string>
+
+
+    <string name="cancelar">Cancelar</string>
+    <string name="logo_descripcion">Logo Three Days Grace</string>
+    <string name="si">Sí</string>
+
+    <string-array name="titulos_album">
+        <item>One-X</item>
+        <item>Life Starts Now</item>
+        <item>Transit of Venus</item>
+        <item>Human</item>
+        <item>Outsider</item>
+        <item>Explosions</item>
+    </string-array>
+
+    <string-array name="tipos_album">
+        <item>Álbum de estudio</item>
+        <item>Álbum en vivo</item>
+        <item>EP</item>
+        <item>Compilatorio</item>
+    </string-array>
+
+    <string name="toast_album_agregado">Álbum agregado</string>
+    <string name="toast_album_actualizado">Álbum actualizado</string>
+    <string name="toast_album_eliminado">Álbum eliminado</string>
+
+    <string name="hint_titulo_album">Título del álbum</string>
+    <string name="hint_tipo_album">Tipo de álbum</string>
+    <string name="hint_anio_album">Año del álbum</string>
+    <string name="btn_guardar">Guardar</string>
+
+
+    <string name="text_intro">Agrega los álbums que tengas en tu colección de esta banda</string>
+    <string name="agregar_album">Agregar álbum</string>
+    <string name="logo_splash">Logo Splash</string>
+
+    <string name="cd_album_image">Imagen del álbum</string>
+    <string name="cd_album_icon">Ícono tipo álbum</string>
+    <string name="cd_edit">Editar</string>
+    <string name="cd_delete">Eliminar</string>
+    <string name="cd_favorite">Favorito</string>
+    <string name="placeholder_titulo">Nombre del álbum</string>
+    <string name="placeholder_anio">Año</string>
+    <string name="placeholder_tipo">Tipo de álbum</string>
+
+    <string name="anio_con_valor">Año: %1$d</string>
+
+
+
+
+
+</resources>
